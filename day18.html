@@ -1,0 +1,133 @@
+<!-- React
+npx creat-react-app 폴더이름 <git bash 에서 실행하니 안됨 cmd에서 사용
+자동으로 폴더도 만들어줌
+
+JSX란
+HTML문법을 JAVASCRIPT코드 내부에 쓴 것 
+자바스크립트.JS파일안에서 HTML문법을 사용해서 VIEW보여주게하는 자바스크립트문법.
+
+Prop란
+컴포넌트 끼리 값을 전달하는 수단 
+
+컴포넌트는 대문자로 시작하자 ! 
+<Food fav=”sjiejfisf” />
+를 사용하려면 props 보내줘야지
+Function Food({fav}) {
+	Return <h1> i like { fav } </h1>;
+}
+
+Var , let , const
+
+let으로 변수를 선언하면 값을 재할당 가능
+const로 선언 후 는 값을 재 할당 할 수 없음.
+다시 손볼꺼같으면 let , 다시 할당 안할거같으면 const
+Food.propTypes = 
+propTypes 이름 바꿀수없음!
+
+npm i gh-pages
+package.json 에 홈페이지 주소 입력
+"homepage": "https://dongmin7208.github.io/react-movieapp-frontend/"
+주소는 대문자 띄어쓰기 안됨
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build ",
+    "predeploy": "npm run build"
+  },
+
+  프론트 세팅
+NPM -V 버전확인,Npx INSTALL NPX -G 설치~,Vsc 설치~,Git -version ,Node -v
+페북 ,에어비앤비 ,넷플릭스,스포티파이 -리액트
+Npx create-react-app 폴더명  (documents에서)
+Npm start 
+깃 설정, 깃허브 레포만들기, 
+Git remote origin 깃허브주소
+
+
+
+MovieApp 프로젝트의 질문 리스트
+diff -r 비교할 경로 비교할경로
+Git commit -am “A first commit” >>변경된 파일을 검색 + 인덱스에 추가 작업을 동시에 *****??????
+란?
+JSX ,  javascript 확장 
+https://ko.reactjs.org/docs/jsx-in-depth.html   이거 이해하기어려우니 한번더읽자
+getElementById ,render, 
+ReactDOM
+React는 User Interface 라이브러리,  DOM은 React를 웹사이트에 render하는걸 도와주는모델
+React를 모바일 앱에 올리고싶다 reactNative~~~사용!
+Variables, classes, arrays, maps, returns – js
+
+#2.0 5:02,
+ReactDOM.render(<App/><Potato />,document.getElementById(“potato”));
+이건 react application이 하나의 component만을 rendering해야
+하기때문이야, 그 component가 App이야
+
+*******************
+#2 1 Reusable Components with 4:44
+App()안에서 위에 function Food의 내용을 
+정의해준 것이 props라는 단어로된 argument(인자)로
+보내진다 ??? 그럼 저 페이지에서 여러 개 정의를 또하면 ??
+저기서 넣어주는 Props의 역할은?? 함께 가야하는 ??
+
+Props.fav 또는 {fav } 같은것 = OKOK
+
+이게 JSX 란다 HTML+ JavaScript 위에 행동이 jsx
+정의하고 그걸 불러다가 보내주고
+***********
+단 Food < component는 대문자로 시작!
+Dish 는 임의 이름정해준건가 원래있는 기능인가 확인
+(걍 인자 인거같음 걍 임의이름)
+
+Component에 key를 지정해줘야함 고유
+자바랑 정보처리기사에서 들은거같음
+
+Var 덮어쓰기 때문에 꼬일수있어서 사용안함?
+, let 변경 될거같으면 let 사용
+ , const 변경되지않음 값 할당 다시 안됨 고유? 같은느낌
+Import 00 from “ 00  ”; 불러주는거 중요하다생각함 잘 못함
+Import 하지않으면 react는 여기에 jsx가 있는 component를
+사용하는 것을 이해하지 못해
+Export default 000; 이와 동일
+Function app() { 하면 return 꼭! 만들었으면 보내줘야지.
+Map() 강의에서 map은 알겠지만{
+Array에 더해서 반환해주는느낌}
+첨엔 더해서 라는느낌이였는데 알고보니
+재 정의가 맞는거같음
+
+Map의 다른 방법을 찾기
+Const numbers = [1,2,3,4,5,];
+Const result = numbers.map((num) => num *2);
+Console.log(result);
+=> <<이거좀 친숙해져야될거같음
+
+Map에 key가 설정되어있지않다면 가상 DOM을 순차적으로 비교해서 속도가 느림.
+OK 이해됨 OKOK KEY가 설정되어있으면 KEY값찾겠지
+
+
+Npm I prop-types  조금만 검색해보고싶음 깊게 ㄴ
+propTypes 잘못된거 에러메세지 잘 뱉어주는친구
+성능상문제로 개발자한테만 보여준단다
+
+number 지정했는데 선택임 꼭 안불러도되는듯
+근데 string인데 넘버로주면 에러뱉음	
+PropTypes 두번말하지만 이름바꾸지마
+https://reactjs.org/docs/typechecking-with-proptypes.html
+사용하는곳???에 
+Import PropTypes from “prop-types”;
+큰 코드 베이스에서는 Flow or TypeScript사용을 추천한대
+https://ko.reactjs.org/docs/static-type-checking.html#gatsby-focus-wrapper
+flow 페북 개발
+TypeScript 마소 개발
+yarn 과 npm 다른종류?
+
+
+onClick 조금만 검색
+current 검색
+this.setState()   << constructor()내부에서 setState()를 호출하면안됨.
+쓸라면 지역 state가필요하다면 생성자 내에서 this.state 하는거
+그 구역 내 그놈 부르는거 this.
+State는 component의 스코프 안의 지역변수지 
+
+constructor() {}  <<<????? Super(props) 조금만
+componentDidMount()
+ -->

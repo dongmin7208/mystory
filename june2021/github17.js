@@ -69,3 +69,13 @@ git checkout master git pull origin master
 
 
 */
+
+/*const App = () => {
+
+    useEffect(() => {
+      const timer = setTimeout(() => console.log("Hello, World!"), 3000);
+      return () => clearTimeout(timer);
+    }, []);
+  
+  };
+  */
