@@ -1,0 +1,57 @@
+<!--
+    this.state.isLoading 사용꺼려하는 이유
+setTimeout 6000 < 6초
+const App = () => {
+
+    useEffect(() => {
+      const timer = setTimeout(() => console.log("Hello, World!"), 3000);
+      return () => clearTimeout(timer);
+    }, []);
+  
+  };
+ 
+
+state에 미래를위해 계획한 것은 에러나지않음
+movies: []  빈 배열넣는 것 예로
+너의 state에 추가하는건 자유 = 굳이 default값들을 선언할 필요는없움
+
+Axios는 fetch 위에 있는 작은 layer야.
+리액트도 자바스크립트 built-in 라이브러리중 하나인 Fetch API라는 훌륭한 API 연동 모듈을 사용한다.
+하지만 Fetch API는 자바스크립트의 built-in 라이브러리라는 특성 때문인지 많은 사람들이 리액트에서 axios를 사용하는 것을 선호한다.
+
+악시오스는~ node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리야.
+(백엔드 프론트 통신을 쉽게하려고 AJAX도 같이 쓴대!)
+Promise(ES6) API 사용
+요청과 응답 데이터의 변형.
+HTTP 요청 취소 및 요청과 응답을 JSON 형태로 자동변경!
+
+GetMovies = async () => {
+Const movies =await axios.get(“AIP주소”)
+};  axios는 기다려줘야해
+
+GET
+Axios.get(url,[,config]
+axios.get('https://localgost:3000/sewon/user')
+  .then((Response)=>{console.log(Response.data)})
+  .catch((Error)=>{console.log(Error)})
+
+,POST
+axios.post("url주소",{
+  data객체
+    },[,config])
+
+,PUT,
+axios.put(url[, data[, config]])
+
+DELETE
+axios.delete(url,[,config]);
+
+
+AJAX(Asynchronous Javascript And XML) -전체페이지 새로고치지않고도 일부만 데이터로드(속도겠지) JavaScript를 사용한 비동기 통신, 클라이언트와 서버간에 XML 데이터를 주고받는기술
+자바스크립트를 통해서 서버에 데이터를 요청하는 것.
+바뀌지않는화면 미리 다운로드받아놔서 빨리띄우게 쿠키?? 그런개념인가 ?
+
+
+
+
+-->
