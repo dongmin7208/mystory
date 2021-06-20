@@ -1,0 +1,92 @@
+<!--
+    자스의 라이브러리, 비동기식 자스, 
+일본 사이트 API제공하는곳 큰곳 어딜까?
+API 보기편한 소스로 바꾸는거 크롬 확장프로그램
+Api Jsonview ,깃허브 Octotree , 뭐로만들었니 ? = Wappalyzer 
+
+
+API에 있는 자료들 제목있는건 다 가져올수있는지확인
+api사이트에서 sort_by_rating 처럼 기능을 제공해주는건가??
+<div> 
+<span> 차이점
+Create-react-app 덕분에 css 통합이 너무너무 쉬워 < ?
+라고 물음표를 쳤었지만
+Import ‘./index.css’;
+css파일을 import로 가져오는 거잖아 이는 웹팩의 css-loader를 활용한거래,
+create-react-app에서 기본적으로 세팅이 되어있데
+느낌 온다와
+
+registerServiceWorker() 레지스터 서비스 워크
+
+import * as serviceWorker from ‘./serviceWorker’;
+serviceWorker.unregister();
+
+사용자가 오프라인이거나 네트워크 속도가 느린경우에도 화면에서 결과를 볼 수있다.
+TODO웹? 
+
+genres: PropTypes.arrayOf(PropTypes.string).isRequired
+하지만 이 경우에는 너가 javascript class안에 있으면 component class에 의해
+혼란스러워져, 그래서 우리는 항상 이걸 기억해야만해.
+Map에 있는 각각 item은 key가 필요해
+
+Npm install react-router-dom
+
+
+
+4개의 props 에 대해서 찾아보고싶어
+withRouter라는 함수를 사용해서 라우트로 사용되고 있지 않은 컴포넌트에서도
+라우트관련 props인 match, history , location을 조회해보겠다.
+
+
+History, l
+그 개발자도구 검사에 밑에 보이던거 그거
+페이지의 기록을 알수있다 
+History 콘솔로 찍어보면 goBack,goForward 랭스 다양한게 들어있다.
+가장 빈번하게사용이 push()인데 
+History.push(‘이동하고자 하는 path’)
+예시
+Function Home ({ history }) {
+  Return (
+    <div>
+	<button onClick={() => history.push(‘/about’)}>About으로 이동 </button>
+   </div>
+);
+}
+Export default Home;
+
+location,match,staticContext 
+https://react.vlpt.us/react-router/04-extra.html
+이거 위에 링크 한번더 읽어바 예제 ㅇㅋ? 
+
+
+https://www.reacttraining.com/react-router/web/api/Link/to-object
+History 안에> go, goBack 이 url을 변경시켜줘?
+Route에 key(id) 넣는거 좀 찾아보자
+<Link 안에 pathname할 때
+ ` < 이거 였음
+Pathname: `/movie/${id}`,    원래하던 ‘ , “ 이거하면 {id} 인식안됨
+Rsync 알아보기
+height: 100vh; 알아보기
+라 쓰고 html 단위에 대해서 알아본다
+HTML구역	
+<div calls=”test”>Test</div>
+CSS구역 
+Body {
+	Font-size: 14px;
+}
+div {
+	Font-size: 1.2em; 
+}  
+라고 한다면 ~~~ 14 곱하기 1.2배 = 16.8px가됨
+rem(r=root최상위)  rem unit은 그리드 시스템에서도 사용가능.
+
+아 이제진짜 vh에대해 ㅋ
+vh와vw단위
+브라우저 높이값이 900px일 때 1vh는 9px라는 의미 그와 유사하게
+뷰포트의 너비값이 750px이면 1vw는 7.5px되는 것.
+
+
+
+개발 흐름검색해서 말할수있게 만들기@
+
+-->
