@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    1. React
+    - 많은 자료가있고 배우기가 좋을거같아서 시작했습니다.
+2. Axios
+    - Node.js를 위한 `promise API`를 활용하는 HTTP 통신 라이브러리
+    - `response timeout`처리 방법이 있다(fetch에는 존재하지않음)
+    - HTTP 요청취소 및 요청과 응답을 JSON형태로 자동변경시켜준다
+    - `return()` 을 `promise`객체로 반환해줘서 `response`데이터를 다루기 용이하다.
+
+    - 사용방법
+    - 가져올때 async를 앞에 적어줘서 늦을수도있다라는걸 표현 후 await으로 `axios.get~~````바로 직전에 찝어준다.
+    - Fetch API를 많이 사용하지만 JS의 built-in 라이브러리 특성때문에 리액트에서는 axios를 사용하는것을 선호
+    - 크로스 브라우징에 신경을 많이써서 브라우저 호환성이 뛰어나다.
+        - `CORS(cross-origin resource Sharing)` 브라우저와 서버 간의 안전한 교차 출처 요청 및 데이터 전송을 지원한다.
+3. fetch
+    - 내장 라이브러리이기에 별도의 `import`를 해줄 필요가 없다
+4. ajax (Asynchronous Javascript And Xml)
+    - 사용자가 페이지를 전부 새로고침 필요없이 필요한부분만
+    - 동기적방식처럼 서버사이드에서 데이터가 올때까지 모든동작을 멈추고 기다리지 않고 필요한 부분만을 비동기적으로 처리를함.
+    - jquery 사용 해야한다.
+    - promise 기반이 아니다.
+
+    - 데이터 전송형에 다양한방법이있지만 대표 3가지
+    - JSON : 가장많이 쓰이는 형식
+    - CSV: `.` 데이터 속성 나누고 줄바꿈으로 데이터를 나누는 방식
+    - XML : 속성과 데이터를 구분한다
+5. JSX
+    - HTML문법을 JS코드 내부에 사용한것.
+    - HTML+JS조합한 문법
+    - 컴포넌트 작성(컴포넌트는 대문자로 시작)
+6. props
+    - 컴포넌트에서 컴포넌트로 전달하는 데이터
+    - 리액트 컴포넌트로 넘어가는 매개변수이다.
+    - 컴포넌트에 props를 전달할때 문자열 빼고는 {}감싸서 전달.
+    - 사용하면 컴포넌트를 효율적으로 재사용가능
+    - 사용방법 : 객체에 있는 값을 사용하려면 `{props.fav}` . 쩜 적어서사용
+7. Life Cycle
+    1. 컴포넌트는 마운팅단계,업데이팅단계,언마운팅단계가 있고 각 단계에서 메서드들이 정해진 순서대로 호출이되는데 이때 호출되는 메서드를 생명 주기 메서드라고 부른다.
+
+    ---
+
+    1. consturctor() 클래스생성
+    2. render()  랜더링 jsx가 html로 변환되어 웹에 나타난다.(?) 
+        1. DOM에 랜더링 될때마다 메서드 내의 state를 하려고한다. [ mounting이라고 한다.]
+        2. ↔ DOM이 삭제될 때마다 메서드 내의 state를 해제하려고 한다.
+    3. componentDidMount() 랜더 직후(컴포넌트가 화면에 모두 그려진후) 호출 -API호출하기 좋은 장소,  `timer`설정 좋은장소
+    4. componentWillUnmount() 위 Did,Un작동시 일부 코드를 작동할수있음.
+
+    ---
+
+    1. state,props의 변경 유무 판단 후 > 업데이트위해 ex) this.setState()
+    2. componentDidUpdate 
+
+    ---
+
+    1. componentWillUn mount
+
+Mounting
+
+1. Mounting
+    1. componentWillMount
+    2. render
+    3. componentDidMount
+
+Updation
+
+---
+
+1. states
+    1. shouldComponentUpdate
+    2. componentWillUpdate
+    3. render
+    4. componentDidUpdate
+1. props
+    1. componentWillReceiveProps
+    2. shouldComponentUpdate
+    3. componentWillUpdate
+    4. render
+    5. componentDidUpdate
+
+    ---
+
+- Axios를 사용하여 API 통신
+- Component LIFE Cycle 理解
+- Ajax와 async의 사용 및 이해
+- Node.js 및 Npm 사용방법 숙지
+- jsx 이용 및 이해
+- -------------------------
+
+문서의 메서드 사용
+
+class 속성값과 요소의 내용을 변경하는 법을 배웠다.
+
+- ------------
+- Local Storage에 저장 및 변경 및 읽기 사용
+
+날씨 구현을 위해 API통신을 했다.
+
+Javascript 이벤트 기능에 대해 공부하고 사용.
+
+- Javascript 함수에 대한 공부 및 사용.
+1. Node.js
+    - 다수의 연결을 효율적으로 관리하고 비용을 최소화할수있는 네트워크 소프트웨어를개발하는 편리한 방법을 제공
+    - 이전에는 각 연결에 새로운 쓰레드를 생성하고 그에따라 메모리를 할당하여 사용자 요청을 처리했지만
+    - `Node`에서는 각 연결이 하나의 이벤트로서 노드 엔진에서 처리됨.
+    - Non-Blocking I/O를 지원하기 때문에 비동기식 프로그래밍 가능하며 I/O부하가 심한 대규모 서비스를 개발하기 적합함.
+    - 내장HTTP서버 라이브러리를 포함하고 있어서 웹 서버에서 아파치 등의 별도의 소프트웨어 없이 동작하는것이 가능.
+    - JAVA프로젝트를 아파치 와 톰캣을 사용해본적이있는데 그것에 비해 굉장히 가볍고 빠르다는 느낌을 받았음.
+    - NPM모듈을 제공한다.
+    - npm을 이용해 필요한 라이브러리와 패키지를 설치하고 사용할수있기 때문에 개발속도와 효율성이 크게 향상.
+
+    ---
+
+    - 서버 체크로직이 많은 경우 : 비동기방식이기때문에 `CallBack Hell`빠질 위험이있다.
+    - 단일 처리가 오래 걸리는경우 :싱글 쓰레드 이기때문
+    - 코드가 수행되어야 코드에 에러가 있는지 알 수 있으며, 에러가 날 경우 프로세스가 내려가기 때문에 테스트가 엄청 중요함. 코드 품질 중요하다.
+2. npm(node packge manager(modules))
+    - `node.js`설치하면 자동으로 `npm` 설치됨
+    - `node.js` 기반의 모듈을 모아둔 집합 저장소
+    - npm 명령어 모음집
+        - `npm -v` 버전확인가능
+        - `npm -h` 명령어 확인가능
+        - `npm install <package> -g`  글로벌하게 모듈을 추가
+        - `npm init`     `package.json`을 만드는 명령어
+        - `npm install <모듈명> --save`
+        - `npm updata <모듈명>`
+        - `npm remove <모듈명>`
+        - `npm list <모듈명>` 모듈의버전확인
+        - `npm ls` 설치된 모듈 리스트  확인
+
+3. package.json
+    - 프로젝트에 대한 명세서
+    - 해당 프로젝트의 이름, 버전, 사용되는 모듈 등 스펙이 작성되어있음. 해당 오픈 소스가 의존하고있는 모듈이 어떤것인지, 명령어도 적혀져있음.
+
+4. TypeScript
+    - Microsoft가 개발
+    - 빌드 에러와 버그를 잡는다.(앱 실행 전)
+    - Create React App과 함께 TypeScript사용하는것과
+    - `npx create-react-app my-app --template typescript`
+    - 프로젝트에 TypeScript추가 하는것 두가지 방법
+    - `npm install --save-dev typescript &&& yarn add —dev typescript`
+    - json파일에 추가.. 컴파일러 설정
+    
+    -->
+</body>
+</html>
